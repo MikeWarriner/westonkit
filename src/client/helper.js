@@ -1,6 +1,6 @@
 'use strict';
 
-console.log("Helper initializing...");
+console.log("Helper2 initializing...");
 
 function exitHandler(options, err) {
     console.log("Exit handler... " + options.why);
