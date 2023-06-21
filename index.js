@@ -1,3 +1,3 @@
 exports.test =  function () {
-    return "Hello world";
+    return "Hello world2";
 }
