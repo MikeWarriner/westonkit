@@ -3,7 +3,7 @@
 require('./src/client/helper');
 var logs = require('./src/client/logs');
 var myserver = require('./src/client/myserver');
-var myserver = require('./src/client/westonapi');
+var westonapi = require('./src/client/westonapi');
 
 
 exports.init = function()
