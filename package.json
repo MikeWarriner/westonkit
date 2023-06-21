@@ -4,8 +4,28 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha './src/**/*.test.js'"
   },
+  "keywords": [
+    "mocha",
+    "chai"
+  ],
   "author": "Mike Warriner",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@sinonjs/referee-sinon": "^11.0.0",
+    "axios": "^1.4.0",
+    "dateformat": "^5.0.3",
+    "deepclone": "^1.0.2",
+    "winston": "^3.9.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.5",
+    "@babel/preset-typescript": "^7.22.5",
+    "chai": "^4.3.7",
+    "knuth-shuffle": "^1.0.8",
+    "mocha": "^10.2.0",
+    "sinon": "^15.1.2",
+    "tap": "^16.3.6"
+  }
 }
