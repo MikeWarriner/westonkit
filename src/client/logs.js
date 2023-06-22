@@ -113,6 +113,13 @@ exports.createLogger = function (serviceName, tags) {
             logger.verbose(util.format(...d));
         };
     }
+    logger.exception = function(msg, exceptionObject)
+    {
+        if (exceptionObject)
+        logger.error("EXCEPTION on "+msg+" "+exceptionObject.message+" "+exceptionObject.stack);
+        else
+        logger.error("EXCEPTION on "+msg+" (null)");
+    }
     logger.info("Logger starting for service " + serviceName + " on " + os.hostname());
 
     currentLogger = logger;
