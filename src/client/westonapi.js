@@ -24,10 +24,10 @@ exports.put = async function (url, config) {
             throw error.message;
         }
     }
-    finally {
-        console.timeEnd(timeConfig);
-        counter--;
-    }
+    // finally {
+    //     console.timeEnd(timeConfig);
+    //     counter--;
+    // }
     return { status: 500, body: 'error' };
 }
 
