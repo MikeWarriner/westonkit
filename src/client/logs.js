@@ -116,7 +116,12 @@ exports.createLogger = function (serviceName, tags) {
     logger.exception = function(msg, exceptionObject)
     {
         if (exceptionObject)
-        logger.error("EXCEPTION on "+msg+" "+exceptionObject.message+" "+exceptionObject.stack);
+        {
+            if (exceptionObject.message)
+                logger.error("EXCEPTION on "+msg+" "+exceptionObject.message+" "+exceptionObject.stack);
+            else
+                logger.error("EXCEPTION on "+msg+" "+exceptionObject);
+        }
         else
         logger.error("EXCEPTION on "+msg+" (null)");
     }
