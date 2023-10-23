@@ -35,7 +35,7 @@ exports.connectToDatabase = () => {
     mongoose.set('strictQuery', false);
     if (!process.env.DB)
         throw "Process.env.DB is null";
-
+ 
     logger.info('Mongoose Connect to '+process.env.DB);
     return mongoose.connect(process.env.DB, {
             useNewUrlParser: true,
