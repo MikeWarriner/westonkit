@@ -25,7 +25,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.23.2",
     "@babel/preset-typescript": "^7.23.2",
-    "chai": "^4.3.7",
+    "chai": "^4.3.10",
     "knuth-shuffle": "^1.0.8",
     "mocha": "^10.2.0",
     "sinon": "^15.1.2",
