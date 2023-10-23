@@ -7,7 +7,7 @@ var fs = require('fs');
 var util = require('util');
 
 var consoleLog;
-var currentLogger;;
+var currentLogger;
 var _require = require('triple-beam'),
     SPLAT = _require.SPLAT;
 
@@ -38,6 +38,13 @@ const mySplat = format((info) => {
 
     return info;
 })
+
+
+
+exports.reset = function()
+{
+    currentLogger = null;
+}
 
 exports.getLogger = function () {
     if (currentLogger==null)

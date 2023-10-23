@@ -16,6 +16,7 @@ describe('log test', async () => {
   });
 
   it('Can create and log something', async () => {
+    westonkit.resetLogger();
 
     //const spyTransport = new winston.transports.SpyTransport();
     var myspy = sinon.spy();
