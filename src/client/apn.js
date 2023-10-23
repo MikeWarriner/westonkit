@@ -4,6 +4,9 @@
 var mongoose = require('mongoose');
 var logger = require('./logs').createLogger('server', ['Server', 'WestonPark', 'Home']);
 var Devices = require('./models/devices.server.model').Devices;
+var db = require('./db');
+
+
 const { v4: uuidv4 } = require('uuid');
 
 var admin = require("firebase-admin");
@@ -27,7 +30,7 @@ exports.sendNotification = async function (payload) {
     logger.info("Sending payload " + JSON.stringify(payload));
     var count = 0;
 
-    //    await db.connectToDatabase();
+    await db.connectToDatabase();
 
     var devices = await Devices.find().sort('-updated').exec(); //distinct('apnID').exec();
     for (var idx in devices) {

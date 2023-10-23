@@ -6,7 +6,6 @@ var myserver = require('./src/client/myserver');
 var westonapi = require('./src/client/westonapi');
 var apn = require('./src/client/apn');
 
-
 exports.init = function()
 {
     
