@@ -21,6 +21,8 @@ exports.initialize = function(serviceAccountProduction)
 
 exports.sendNotification = async function (payload) {
 
+    await db.connectToDatabase();
+
     var options = {
         priority: "normal",
         timeToLive: 60, // * 60,
@@ -30,8 +32,7 @@ exports.sendNotification = async function (payload) {
     logger.info("Sending payload " + JSON.stringify(payload));
     var count = 0;
 
-    await db.connectToDatabase();
-
+    
     var devices = await Devices.find().sort('-updated').exec(); //distinct('apnID').exec();
     for (var idx in devices) {
         var device = devices[idx];
