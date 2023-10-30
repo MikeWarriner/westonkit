@@ -48,8 +48,8 @@ exports.sendNotification = async function (payload) {
             logger.info("send notification reg:" + device.updated + " to:" + device.email + "  " + device.apnID);
             try {
                 var msgid = await admin.messaging().sendToDevice(device.apnID, payload, options);
-                console.log(msgid);
-                console.log(JSON.stringify(msgid));
+
+                logger.info("Firebase Send to Device: "+JSON.stringify(msgid));
                 count = count + 1;
             } catch (error) {
                 logger.error("sendNotification(Firebase) error : ", error)
