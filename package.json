@@ -14,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@sinonjs/referee-sinon": "^11.0.0",
-    "axios": "^1.4.0",
+    "axios": "^1.6.2",
     "dateformat": "^5.0.3",
     "deepclone": "^1.0.2",
     "dotenv": "^16.3.1",
